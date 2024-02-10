@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hall of Fame</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #363231;
+            color: #ffffff;
+            transition: filter 0.5s;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .vlog-container {
+            clear: both;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .vlog-container img {
+            float: left;
+            max-width: 40%;
+            height: auto;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .vlog-content {
+            float: right;
+            width: 50%;
+            background-color: #6d6b6a7a;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 0 10px 10px 0;
+            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-left: -10px;
+        }
+
+        .vlog-container:hover .vlog-content {
+            transform: scale(1.02);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .vlog-container h2,
+        .vlog-container p {
+            margin: 0;
+        }
+
+        #info-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: #343a40;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #main-container.blur {
+            filter: blur(5px);
+        }
+
+        #info-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .close-button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #007BFF;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #leaderboard {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        #leaderboard-button {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px;
+            background-color: #343a40;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="main-container">
+    <div class="vlog-container">
+        <img src="Julchen.jpeg" alt="Linkes Bild">
+        <div class="vlog-content">
+            <h2>Hall of Fame 2024</h2>
+            <p>Hier werden alle Leute geehrt, die verschiedene Dinge getan haben und dafür hier stehen sollten.</p>
+        </div>
+    </div>
+
+    <!-- Fügen Sie hier weitere Vlogs hinzu -->
+
+    <div class="vlog-container">
+        <img src="juclhen_bat.jpg" alt="Linkes Bild">
+        <div class="vlog-content">
+            <h2>3 Julchen</h2>
+            <p>Diese Person wird besonders geehrt, da sie jeden auseinander genommen hat und sie die besten Sicker macht. </p>
+            <p> -</p>
+            <p>Informationen: </p>
+            <p>Sein Name ist Leo so heißt er in echt und er ist der Winzige (weil er so klein ist), in echt super freundlich und online ab 23 Uhr hyperaktiv (manchmal). </p>
+            <p>-</p>
+            <p>-</p>
+            <p>Informationen: Julchen</p>
+        </div>
+    </div>
+
+    <div class="vlog-container">
+        <img src="Enderman.jpg" alt="Linkes Bild">
+        <div class="vlog-content">
+            <h2>(In ehren) Oka Gaiming</h2>
+            <p>In echt heißt er Valentin. Und er ist sehr besonders, da er  sehr viel einstecken musste (auch Sticker). Deshalb wird er Hier geehrt .</p>
+            <p>-</p>
+            <p>In echt ist er groß und dünn. Also ein Enderman. Oka falls du das liest nimm es nich Perölich aber immerhin stehst du Hier</p>
+            <p>-</p>
+            <p>-</p>
+            <p>Informationen: Julchen</p>
+        </div>
+    </div>
+
+    <div class="vlog-container">
+        <img src="Comming soon.png" alt="Linkes Bild">
+        <div class="vlog-content">
+            <h2>Neue Vlogs Kommen Noch...</h2>
+            <p>Ich weiß das es spannend ist verschidene Menschen hier unten anzusehen aber leider gibt es nicht Unendlich deshalb solltest du noch etwas warten vieleicht gibt es dann mehr Personen hier.</p>
+        </div>
+    </div>
+
+    <!-- Fügen Sie hier weitere Vlogs hinzu -->
+
+</div>
+
+<button id="leaderboard-button" class="close-button" onclick="showLeaderboard()">Leaderboard</button>
+
+<div id="leaderboard">
+    <h2>Leaderboard</h2>
+    <p>3 Julchen: In der Hall of Fame seit 1.2.2024</p>
+    <p>Oka Gaiming: In der Hall of Fame seit 10.2.2024 </p>
+    <!-- Fügen Sie hier weitere Einträge hinzu -->
+    <button id="close-leaderboard-button" class="close-button" onclick="hideLeaderboard()">Schließen</button>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Zeige Vlogs beim Scrollen
+        window.addEventListener("scroll", showVlogs);
+        showVlogs(); // Zeige Vlogs, wenn die Seite geladen wird
+
+        function showVlogs() {
+            var vlogContainers = document.querySelectorAll(".vlog-container");
+            vlogContainers.forEach(function(vlogContainer) {
+                if (isElementInViewport(vlogContainer)) {
+                    vlogContainer.style.opacity = 1;
+                    vlogContainer.style.transform = "translateY(0)";
+                }
+            });
+        }
+
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    });
+
+    function showInfoModal() {
+        var mainContainer = document.getElementById("main-container");
+        mainContainer.classList.add("blur");
+
+        var infoContent = document.getElementById("info-content");
+        infoContent.style.display = "block";
+        setTimeout(function() {
+            infoContent.style.opacity = 1;
+        }, 50);
+    }
+
+    function hideInfoModal() {
+        var mainContainer = document.getElementById("main-container");
+        mainContainer.classList.remove("blur");
+
+        var infoContent = document.getElementById("info-content");
+        infoContent.style.opacity = 0;
+        setTimeout(function() {
+            infoContent.style.display = "none";
+        }, 500);
+    }
+
+    function showLeaderboard() {
+        var mainContainer = document.getElementById("main-container");
+        mainContainer.classList.add("blur");
+
+        var leaderboard = document.getElementById("leaderboard");
+        leaderboard.style.display = "block";
+        setTimeout(function() {
+            leaderboard.style.opacity = 1;
+        }, 50);
+    }
+
+    function hideLeaderboard() {
+        var mainContainer = document.getElementById("main-container");
+        mainContainer.classList.remove("blur");
+
+        var leaderboard = document.getElementById("leaderboard");
+        leaderboard.style.opacity = 0;
+        setTimeout(function() {
+            leaderboard.style.display = "none";
+        }, 500);
+    }
+</script>
+
+</body>
+</html>
